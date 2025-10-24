@@ -3,7 +3,7 @@ import pandas as pd
 class ETLProcess:
     def __init__(self, fonte_dados):
         self.fonte_dados = fonte_dados
-        
+
     def extrair_dados(self):
         raise NotImplementedError("Método extrair_dados deve ser implementado nas classes filhas.")
 
@@ -28,13 +28,31 @@ class ETLCSV(ETLProcess):
         return dados.applymap(lambda x: x.upper() if isinstance(x, str) else x)
 
     def carregar_dados(self, dados_transformados):
-        # Aqui você pode implementar a lógica para carregar os dados transformados para onde desejar
-        print("Dados transformados:")
+        # Aqui você pode implementar a lógica para carregar os dados transformados de um arquivo CSV
+        print("Dados transformados (CSV):")
+        print(dados_transformados)
+
+
+class ETLExcel(ETLProcess):
+    def extrair_dados(self):
+        return pd.read_excel(self.fonte_dados)
+
+    def transformar_dados(self, dados):
+        # Exemplo simples de transformação: converter todas as letras em minúsculas
+        return dados.applymap(lambda x: x.lower() if isinstance(x, str) else x)
+
+    def carregar_dados(self, dados_transformados):
+        # Aqui você pode implementar a lógica para carregar os dados transformados de um arquivo Excel
+        print("Dados transformados (Excel):")
         print(dados_transformados)
 
 
 # Exemplo de uso
 if __name__ == "__main__":
-    fonte_csv = 'csv.csv'  # Substitua 'dados.csv' pelo caminho do seu arquivo CSV
+    fonte_csv = 'ccc.csv'  # Substitua 'dados.csv' pelo caminho do seu arquivo CSV
     etl_csv = ETLCSV(fonte_csv)
     etl_csv.executar_etl()
+
+    fonte_excel = 'dados.xlsx'  # Substitua 'dados.xlsx' pelo caminho do seu arquivo Excel
+    etl_excel = ETLExcel(fonte_excel)
+    etl_excel.executar_etl()

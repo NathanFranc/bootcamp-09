@@ -1,0 +1,11 @@
+id,nome,idade,email,cidade,profissao,salario,data_cadastro
+1,João Silva,28,joao.silva@email.com,São Paulo,Engenheiro,7500.00,2022-03-15
+2,Maria Santos,34,maria.santos@email.com,Rio de Janeiro,Advogada,8200.50,2021-11-08
+3,Pedro Oliveira,25,pedro.oliveira@email.com,Belo Horizonte,Desenvolvedor,6800.00,2023-01-20
+4,Ana Costa,29,ana.costa@email.com,Porto Alegre,Arquiteta,7100.75,2022-07-12
+5,Carlos Mendes,42,carlos.mendes@email.com,Salvador,Médico,12500.00,2020-05-30
+6,Juliana Pereira,31,juliana.pereira@email.com,Brasília,Professora,4800.00,2022-09-05
+7,Rodrigo Alves,27,rodrigo.alves@email.com,Fortaleza,Designer,5500.25,2023-02-18
+8,Fernanda Lima,38,fernanda.lima@email.com,Recife,Enfermeira,6200.00,2021-12-10
+9,Rafael Souza,33,rafael.souza@email.com,Curitiba,Analista de Sistemas,7800.50,2022-04-22
+10,Amanda Rocha,26,amanda.rocha@email.com,Manaus,Psicóloga,5900.00,2023-03-14
